@@ -1,0 +1,16 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "CMS Content Type Creator",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "@salesforce/lwc-jest": "^0.6.2"
+  },
+  "scripts": {
+    "test:unit": "lwc-jest --coverage",
+    "test:unit:watch": "lwc-jest --watch"
+  },
+  "author": "Caio Ono",
+  "license": "BSD-3-Clause"
+}

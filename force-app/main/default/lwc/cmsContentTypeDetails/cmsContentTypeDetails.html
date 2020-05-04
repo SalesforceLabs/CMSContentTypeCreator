@@ -1,0 +1,84 @@
+<!--
+ * Copyright (c) 2020, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+-->
+
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <span style="font-size: 13px">Content Type</span>
+            <br />
+            <b><span style="font-size: 18px">{masterLabel}</span></b>
+        </h3>
+        <div slot="actions">
+            <lightning-button class="slds-m-right_x-small" label="Delete" onclick={showConfirmation}></lightning-button>
+            <lightning-button label="Clone" variant="brand" onclick={clone}>
+            </lightning-button>
+        </div>
+
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <p class="field-title">Developer Name</p>
+                <p>{developerName}</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <p class="field-title">Created By</p>
+                <p>{createdByName}</p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <p class="field-title">Created Date</p>
+                <p>
+                    <lightning-formatted-date-time value={createdDateJS} day="2-digit" hour="2-digit" minute="2-digit"
+                        month="2-digit" year="numeric"></lightning-formatted-date-time>
+                </p>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <p class="field-title">Description</p>
+                <p>{description}</p>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <template if:true={isLoading}>
+            <lightning-layout vertical-align="center" horizontal-align="center">
+                <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+            </lightning-layout>
+        </template>
+    </lightning-card>
+
+    <div class="slds-m-bottom_medium"></div>
+
+    <lightning-card>
+        <h3 slot="title">
+            Nodes
+        </h3>
+        <div style="height: 493px">
+            <lightning-datatable key-field="nodeName" data={nodes} columns={columns} errors={errors}
+                hide-checkbox-column="true"></lightning-datatable>
+            <template if:true={isLoading}>
+                <lightning-layout vertical-align="center" horizontal-align="center">
+                    <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+                </lightning-layout>
+            </template>
+        </div>
+    </lightning-card>
+
+    <template if:true={isConfirming}>
+        <c-cms-confirmation>
+            <div slot="title">Delete Content Type</div>
+            <div slot="body">
+                <p>Are you sure you want to delete this Content Type?</p>
+            </div>
+            <div slot="footer">
+                <lightning-button class="slds-m-right_small" label="Cancel" onclick={closeConfirmationModal}>
+                </lightning-button>
+                <lightning-button label="Delete" onclick={deleteContentType} variant="brand"></lightning-button>
+            </div>
+        </c-cms-confirmation>
+    </template>
+
+    <template if:true={isShowingNotice}>
+        <c-cms-notice onclosenotice={closeNotice} header={errorTitle} message={errorMessage}></c-cms-notice>
+    </template>
+</template>

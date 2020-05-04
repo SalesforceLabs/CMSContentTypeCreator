@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "result": {
+    "createdById": "0053h000000wfDoAAI",
+    "createdByName": "Caio Ono",
+    "createdDate": "2020-03-24T20:06:35.000Z",
+    "fileName": "tabs/CMS_Content_Types.tab",
+    "fullName": "CMS_Content_Types",
+    "id": "01r3h000000XjhfAAC",
+    "lastModifiedById": "0053h000000wfDoAAI",
+    "lastModifiedByName": "Caio Ono",
+    "lastModifiedDate": "2020-03-24T20:06:35.000Z",
+    "manageableState": "unmanaged",
+    "namespacePrefix": "sflabs_cms_ct",
+    "type": "CustomTab"
+  }
+}

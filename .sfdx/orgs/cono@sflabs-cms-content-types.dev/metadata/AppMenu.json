@@ -1,0 +1,31 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "0053h000000wfDoAAI",
+      "createdByName": "Caio Ono",
+      "createdDate": "1970-01-01T00:00:00.000Z",
+      "fileName": "appMenus/AppSwitcher.appMenu",
+      "fullName": "AppSwitcher",
+      "id": "",
+      "lastModifiedById": "0053h000000wfDoAAI",
+      "lastModifiedByName": "Caio Ono",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "namespacePrefix": "",
+      "type": "AppMenu"
+    },
+    {
+      "createdById": "0053h000000wfDoAAI",
+      "createdByName": "Caio Ono",
+      "createdDate": "1970-01-01T00:00:00.000Z",
+      "fileName": "appMenus/Salesforce1.appMenu",
+      "fullName": "Salesforce1",
+      "id": "",
+      "lastModifiedById": "0053h000000wfDoAAI",
+      "lastModifiedByName": "Caio Ono",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "namespacePrefix": "",
+      "type": "AppMenu"
+    }
+  ]
+}

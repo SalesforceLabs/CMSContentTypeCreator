@@ -1,0 +1,53 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "0053h000000wfDoAAI",
+      "createdByName": "Caio Ono",
+      "createdDate": "2020-03-24T20:47:12.000Z",
+      "fileName": "managedContentTypes/Blog_Entry.managedContentType",
+      "fullName": "Blog_Entry",
+      "id": "0T13h000000GuI8CAK",
+      "lastModifiedById": "0053h000000wfDoAAI",
+      "lastModifiedByName": "Caio Ono",
+      "lastModifiedDate": "2020-03-24T20:47:12.000Z",
+      "type": "ManagedContentType"
+    },
+    {
+      "createdById": "0053h000000wfDoAAI",
+      "createdByName": "Caio Ono",
+      "createdDate": "2020-03-24T20:20:40.000Z",
+      "fileName": "managedContentTypes/Test.managedContentType",
+      "fullName": "Test",
+      "id": "0T13h000000GuGbCAK",
+      "lastModifiedById": "0053h000000wfDoAAI",
+      "lastModifiedByName": "Caio Ono",
+      "lastModifiedDate": "2020-03-24T20:20:40.000Z",
+      "type": "ManagedContentType"
+    },
+    {
+      "createdById": "0053h000000wfDoAAI",
+      "createdByName": "Caio Ono",
+      "createdDate": "2020-03-24T20:31:45.000Z",
+      "fileName": "managedContentTypes/Banner_Ad.managedContentType",
+      "fullName": "Banner_Ad",
+      "id": "0T13h000000GuHACA0",
+      "lastModifiedById": "0053h000000wfDoAAI",
+      "lastModifiedByName": "Caio Ono",
+      "lastModifiedDate": "2020-03-24T20:31:45.000Z",
+      "type": "ManagedContentType"
+    },
+    {
+      "createdById": "0053h000001BNhCAAW",
+      "createdByName": "Automated Process",
+      "createdDate": "2020-03-24T19:11:08.000Z",
+      "fileName": "managedContentTypes/news.managedContentType",
+      "fullName": "news",
+      "id": "0T13h000000GuCZCA0",
+      "lastModifiedById": "0053h000001BNhCAAW",
+      "lastModifiedByName": "Automated Process",
+      "lastModifiedDate": "2020-03-24T19:11:08.000Z",
+      "type": "ManagedContentType"
+    }
+  ]
+}

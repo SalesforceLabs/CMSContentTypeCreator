@@ -1,0 +1,81 @@
+<!--
+ * Copyright (c) 2020, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+-->
+
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <b>Creating New Content Type</b>
+        </h3>
+        <div slot="actions">
+            <lightning-button class="slds-m-right_x-small" label="Cancel" onclick={cancel}></lightning-button>
+            <lightning-button label="Create" variant="brand" onclick={openLastCheckBeforeCreatingModal}>
+            </lightning-button>
+        </div>
+
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <lightning-input onblur={setMasterLabel} value={masterLabel} label="Label"></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <lightning-input onblur={setDeveloperName} value={developerName} label="Developer Name">
+                </lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <lightning-textarea onblur={setDescription} value={description} label="Description">
+                </lightning-textarea>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <template if:true={isLoading}>
+            <lightning-layout vertical-align="center" horizontal-align="center">
+                <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+            </lightning-layout>
+        </template>
+    </lightning-card>
+
+    <div class="slds-m-bottom_medium"></div>
+
+    <lightning-card>
+        <h3 slot="title">
+            Nodes
+        </h3>
+        <div slot="actions">
+            <lightning-button label="Add Node" onclick={addNode}></lightning-button>
+        </div>
+        <div style="height: 445px">
+            <c-extended-datatable key-field="rowId" data={nodes} columns={columns} errors={errors}
+                draft-values={draftValues} onrowaction={datatableRowAction} hide-checkbox-column="true"
+                oncellchange={cellChanged} suppress-bottom-bar="true" oncomboboxselected={comboboxSelected}>
+            </c-extended-datatable>
+            <template if:true={isLoading}>
+                <lightning-layout vertical-align="center" horizontal-align="center">
+                    <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+                </lightning-layout>
+            </template>
+        </div>
+    </lightning-card>
+
+    <template if:true={isConfirming}>
+        <c-cms-confirmation>
+            <div slot="title">Create Content Type</div>
+            <div slot="body">
+                <p class="slds-m-bottom_small"><b>After a Content Type is created <span style="color: red;">it cannot be
+                            edited.</span></b></p>
+                <p>Are you sure this is the final version of your new Content Type?</p>
+            </div>
+            <div slot="footer">
+                <lightning-button class="slds-m-right_small" label="Back" onclick={closeLastCheckBeforeCreatingModal}>
+                </lightning-button>
+                <lightning-button label="Confirm" onclick={create} variant="brand"></lightning-button>
+            </div>
+        </c-cms-confirmation>
+    </template>
+
+    <template if:true={isShowingNotice}>
+        <c-cms-notice onclosenotice={closeNotice} header={errorTitle} message={errorMessage}></c-cms-notice>
+    </template>
+</template>

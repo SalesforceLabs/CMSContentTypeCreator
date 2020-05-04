@@ -1,0 +1,40 @@
+<!--
+ * Copyright (c) 2020, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+-->
+
+<apex:page >
+    <apex:includeScript value="/support/console/48.0/integration.js"/>
+    <apex:includeLightning />
+    <apex:slds />
+
+    <div class="slds-m-around_small">
+        <div class="slds-spinner_container" id="spinner">
+            <div role="status" class="slds-spinner slds-spinner_large slds-spinner_brand">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+        
+        <div id="lightning"/>
+    </div>
+    <script>
+        sforce.console.setTabTitle("* New Content Type");
+        const spinner = document.getElementById("spinner");
+        const c__Id = '{!$CurrentPage.parameters.c__Id}';
+        if(c__Id === '' || c__Id.length === 18){
+            $Lightning.use("sflabs_cms_ct:CMS_CreateContentType_WrapperApp", function() {
+                $Lightning.createComponent("sflabs_cms_ct:cmsCreateContentType",
+                    { c__Id : c__Id, sforce: sforce},
+                    "lightning",
+                    function(cmp) {
+                        spinner.classList.toggle("slds-hidden");
+                    }
+                );
+            });
+        }
+    </script>
+</apex:page>

@@ -1,0 +1,25 @@
+<!--
+ * Copyright (c) 2020, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+-->
+
+<template>
+    <div style="height:24rem">
+        <section class="slds-modal slds-fade-in-open slds-modal_prompt">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header slds-theme_error slds-theme_alert-texture">
+                    <h2 class="slds-text-heading_medium">{header}</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <p>{message}</p>
+                </div>
+                <footer class="slds-modal__footer slds-theme_default">
+                    <lightning-button label="Okay" onclick={closeNotice}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+</template>

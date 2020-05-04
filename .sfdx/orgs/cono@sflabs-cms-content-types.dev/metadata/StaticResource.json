@@ -1,0 +1,17 @@
+{
+  "status": 0,
+  "result": {
+    "createdById": "0053h000000wfDoAAI",
+    "createdByName": "Caio Ono",
+    "createdDate": "2020-04-07T17:58:06.000Z",
+    "fileName": "staticresources/FixExtendedDatatable.resource",
+    "fullName": "FixExtendedDatatable",
+    "id": "0813h0000014VieAAE",
+    "lastModifiedById": "0053h000000wfDoAAI",
+    "lastModifiedByName": "Caio Ono",
+    "lastModifiedDate": "2020-04-07T17:58:28.000Z",
+    "manageableState": "unmanaged",
+    "namespacePrefix": "sflabs_cms_ct",
+    "type": "StaticResource"
+  }
+}

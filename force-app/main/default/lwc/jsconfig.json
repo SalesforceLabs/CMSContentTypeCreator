@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/cmsNotice": [
+                "cmsNotice/cmsNotice.js"
+            ],
+            "c/cmsContentTypes": [
+                "cmsContentTypes/cmsContentTypes.js"
+            ],
+            "c/cmsCreateContentType": [
+                "cmsCreateContentType/cmsCreateContentType.js"
+            ],
+            "c/cmsContentTypeDetails": [
+                "cmsContentTypeDetails/cmsContentTypeDetails.js"
+            ],
+            "c/extendedDatatable": [
+                "extendedDatatable/extendedDatatable.js"
+            ],
+            "c/comboboxCustomType": [
+                "comboboxCustomType/comboboxCustomType.js"
+            ],
+            "c/utils": [
+                "utils/utils.js"
+            ],
+            "c/cmsConfirmation": [
+                "cmsConfirmation/cmsConfirmation.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

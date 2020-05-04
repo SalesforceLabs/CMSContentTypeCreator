@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>CMS Content Types</label>
+    <pageAccesses>
+        <apexPage>CMS_ContentTypeDetails_WrapperVFP</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>CMS_ContentTypes_WrapperVFP</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>CMS_CreateContentType_WrapperVFP</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <tabSettings>
+        <tab>CMS_Content_Types</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>
